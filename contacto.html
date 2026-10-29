@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <title>Contacto - Andelisse</title>
+  </head>
+  <body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-andelisse sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand brand-title d-flex align-items-center text-white" href="#" onclick="abrirModal('logo.png', 'Logo de Andelisse')">
+          <img src="logo.png" alt="Andelisse Logo" class="logo-img mr-2" onerror="this.src='logo.jpg'">
+          Andelisse
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavegacion">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Catálogo Completo</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contacto.html">Pedidos y Contacto</a>
+            </li>
+          </ul>
+
+          <button class="btn btn-carrito-nav my-2 my-sm-0 mr-2" onclick="abrirCarrito()">
+            🛒 Carrito <span class="badge badge-pill badge-danger" id="cartCountNav">0</span>
+          </button>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Buscar ramo..." aria-label="Buscar">
+            <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container my-5">
+      <h2 class="text-andelisse text-center font-weight-bold mb-2">Haz tu Pedido Especial</h2>
+      <p class="text-center text-muted mb-4">Escríbenos para encargar tu ramo personalizado o arreglo conmemorativo.</p>
+
+      <div class="row bg-white p-4 rounded border shadow-sm align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="imagen12.jpg" alt="Alas de Ángel Conmemorativas" class="img-fluid rounded border shadow-sm img-clicable" style="max-height: 320px; object-fit: cover;" onclick="abrirModal('imagen12.jpg', 'Alas de Ángel Conmemorativas')">
+          <p class="small text-muted mt-2">🕊️ Pedidos personalizados con amor y respeto</p>
+        </div>
+
+        <div class="col-md-8">
+          <!-- FORMULARIO HORIZONTAL (Requerido) -->
+          <form>
+            <div class="form-group row">
+              <label for="nombreCliente" class="col-sm-3 col-form-label font-weight-bold small">Nombre:</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control form-control-sm" id="nombreCliente" placeholder="Tu nombre completo">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="emailCliente" class="col-sm-3 col-form-label font-weight-bold small">Correo:</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control form-control-sm" id="emailCliente" placeholder="nombre@ejemplo.com">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="telefonoCliente" class="col-sm-3 col-form-label font-weight-bold small">WhatsApp:</label>
+              <div class="col-sm-9">
+                <input type="tel" class="form-control form-control-sm" id="telefonoCliente" placeholder="Ej. 7000-0000">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="ramoSelect" class="col-sm-3 col-form-label font-weight-bold small">Modelo elegido:</label>
+              <div class="col-sm-9">
+                <select class="form-control form-control-sm" id="ramoSelect">
+                  <option selected>Elige un modelo...</option>
+                  <option>Ramo Snoopy Birthday</option>
+                  <option>Ramo Especial Stitch</option>
+                  <option>Corazón Memorial para Mejor Amigo</option>
+                  <option>Alas Conmemorativas / Cruz Celestial</option>
+                  <option>Diseño Personalizado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="mensajeTexto" class="col-sm-3 col-form-label font-weight-bold small">Dedicatoria / Fecha:</label>
+              <div class="col-sm-9">
+                <textarea class="form-control form-control-sm" id="mensajeTexto" rows="3" placeholder="Escribe tu mensaje especial, colores o fecha requerida..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-group row mb-0">
+              <div class="col-sm-9 offset-sm-3">
+                <button type="submit" class="btn btn-andelisse btn-sm mr-2">Enviar Pedido</button>
+                <button type="reset" class="btn btn-secondary btn-sm">Cancelar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL VISTA PREVIA IMAGEN -->
+    <div class="modal fade" id="modalImagen" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content bg-white border-0 shadow-lg">
+          <div class="modal-header bg-andelisse text-white">
+            <h5 class="modal-title font-weight-bold" id="modalTitulo">Vista Previa</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center p-4">
+            <img id="imagenModal" src="" class="img-fluid rounded shadow-sm" style="max-height: 75vh; object-fit: contain;" alt="Imagen Ampliada">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CARRITO DE COMPRAS -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-white border-0 shadow-lg">
+          <div class="modal-header bg-andelisse text-white">
+            <h5 class="modal-title font-weight-bold">🛒 Tu Carrito de Compras</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-3">
+            <div id="cartItemsContainer">
+              <p class="text-center text-muted my-3">El carrito está vacío.</p>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center font-weight-bold px-2">
+              <span>Total:</span>
+              <span class="text-andelisse h5 mb-0" id="cartTotalAmount">$0.00</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Seguir Viendo</button>
+            <button type="button" class="btn btn-success btn-sm font-weight-bold" onclick="enviarPedidoWhatsApp()">📱 Encargar por WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-andelisse text-white text-center py-3 mt-5">
+      <p class="mb-0 small">&copy; 2026 Andelisse - Ramos Eternos Hechos con Amor 💕</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+      let carrito = [];
+
+      function abrirModal(ruta, titulo) {
+        document.getElementById('imagenModal').src = ruta;
+        document.getElementById('modalTitulo').innerText = titulo;
+        $('#modalImagen').modal('show');
+      }
+
+      function cambiarCantidad(index, delta) {
+        carrito[index].cantidad += delta;
+        if (carrito[index].cantidad <= 0) {
+          carrito.splice(index, 1);
+        }
+        actualizarCarritoUI();
+      }
+
+      function actualizarCarritoUI() {
+        let totalCount = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        let totalPrice = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+        
+        document.getElementById('cartCountNav').innerText = totalCount;
+        document.getElementById('cartTotalAmount').innerText = '$' + totalPrice.toFixed(2);
+
+        let container = document.getElementById('cartItemsContainer');
+        if (carrito.length === 0) {
+          container.innerHTML = '<p class="text-center text-muted my-3">El carrito está vacío.</p>';
+          return;
+        }
+
+        let html = '<ul class="list-group list-group-flush">';
+        carrito.forEach((item, index) => {
+          html += `
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <div>
+                <strong>${item.nombre}</strong><br>
+                <small class="text-muted">$${item.precio.toFixed(2)} c/u</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-outline-secondary py-0 px-2 mr-2" onclick="cambiarCantidad(${index}, -1)">-</button>
+                <span>${item.cantidad}</span>
+                <button class="btn btn-sm btn-outline-secondary py-0 px-2 ml-2" onclick="cambiarCantidad(${index}, 1)">+</button>
+              </div>
+            </li>
+          `;
+        });
+        html += '</ul>';
+        container.innerHTML = html;
+      }
+
+      function abrirCarrito() {
+        actualizarCarritoUI();
+        $('#modalCarrito').modal('show');
+      }
+
+      function enviarPedidoWhatsApp() {
+        if (carrito.length === 0) {
+          alert('Tu carrito está vacío.');
+          return;
+        }
+        let texto = '¡Hola Andelisse! Quisiera realizar el siguiente pedido:%0A';
+        let total = 0;
+        carrito.forEach(item => {
+          let sub = item.precio * item.cantidad;
+          total += sub;
+          texto += `- ${item.cantidad}x ${item.nombre} ($${sub.toFixed(2)})%0A`;
+        });
+        texto += `%0ATotal estimado: $${total.toFixed(2)}`;
+        window.open('https://wa.me/?text=' + texto, '_blank');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+/* custom.css - Estilos Rosa Pastel y Carrito para Andelisse */
+
+:root {
+  --rosa-pastel-oscuro: #e8a0bf;
+  --rosa-pastel-medio: #f7d6e0;
+  --rosa-pastel-claro: #fff0f5;
+  --texto-suave: #6b4e5b;
+}
+
+body {
+  background-color: var(--rosa-pastel-claro);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--texto-suave);
+}
+
+.bg-andelisse {
+  background-color: var(--rosa-pastel-oscuro) !important;
+}
+
+.text-andelisse {
+  color: #c96b93 !important;
+}
+
+.btn-andelisse {
+  background-color: var(--rosa-pastel-oscuro);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-andelisse:hover {
+  background-color: #d882a8;
+  color: white;
+}
+
+.brand-title {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+.hero-banner {
+  background-color: #fce4ec;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border: 2px dashed var(--rosa-pastel-oscuro);
+}
+
+.card-ramo {
+  border: 1px solid var(--rosa-pastel-medio);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.card-ramo:hover {
+  transform: translateY(-4px);
+}
+
+.img-catalogo-tabla {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.img-catalogo-tabla:hover {
+  opacity: 0.8;
+}
+
+.img-clicable {
+  cursor: pointer;
+}
+
+/* Botón flotante del Carrito */
+.btn-carrito-nav {
+  position: relative;
+  background-color: #ffffff;
+  color: #c96b93;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
