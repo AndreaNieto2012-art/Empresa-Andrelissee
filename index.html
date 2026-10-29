@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <title>Andelisse - Ramos Eternos</title>
+  </head>
+  <body>
+
+    <!-- BARRA DE NAVEGACIÓN CON CARRITO -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-andelisse sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand brand-title d-flex align-items-center text-white" href="#" onclick="abrirModal('logo.png', 'Logo de Andelisse')">
+          <img src="logo.png" alt="Andelisse Logo" class="logo-img mr-2" onerror="this.src='logo.jpg'">
+          Andelisse
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavegacion">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Catálogo Completo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Pedidos y Contacto</a>
+            </li>
+          </ul>
+
+          <!-- Botón de Carrito -->
+          <button class="btn btn-carrito-nav my-2 my-sm-0 mr-2" onclick="abrirCarrito()">
+            🛒 Carrito <span class="badge badge-pill badge-danger" id="cartCountNav">0</span>
+          </button>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Buscar ramo..." aria-label="Buscar">
+            <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container my-4">
+
+      <!-- Banner Principal -->
+      <div class="hero-banner text-center">
+        <div class="row align-items-center">
+          <div class="col-md-7 text-md-left text-center">
+            <h1 class="text-andelisse font-weight-bold">Ramos Eternos Hechos a Mano ✨</h1>
+            <p class="lead">Creamos detalles únicos que nunca se marchitan, con peluches, rosas de satén y arreglos conmemorativos para recordar a quienes amamos.</p>
+            <a href="catalogo.html" class="btn btn-andelisse btn-lg mt-2">Ver Catálogo</a>
+          </div>
+          <div class="col-md-5 mt-3 mt-md-0">
+            <img src="imagen1.jpg" alt="Ramo Principal Snoopy" class="img-fluid rounded shadow-sm img-clicable" style="max-height: 230px; width: 100%; object-fit: cover;" onclick="abrirModal('imagen1.jpg', 'Ramo Principal Snoopy')">
+          </div>
+        </div>
+      </div>
+
+      <!-- Destacados con Agregar al Carrito -->
+      <h3 class="text-center text-andelisse my-4">✨ Creaciones Destacadas ✨</h3>
+      
+      <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card card-ramo text-center h-100 shadow-sm">
+            <img src="imagen2.jpg" class="card-img-top img-clicable" alt="Ramo Stitch" style="height: 240px; object-fit: cover;" onclick="abrirModal('imagen2.jpg', 'Ramo Especial Stitch')">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-andelisse font-weight-bold">Ramo Especial Stitch</h5>
+              <p class="card-text small">Confeccionado con peluche de Stitch y tonos azules satinados.</p>
+              <div class="mt-auto">
+                <span class="badge badge-pill bg-andelisse text-white p-2 mb-2">$22.00</span>
+                <button class="btn btn-andelisse btn-sm btn-block" onclick="agregarAlCarrito('Ramo Especial Stitch', 22.00)">🛒 Agregar al Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card card-ramo text-center h-100 shadow-sm">
+            <img src="imagen5.jpg" class="card-img-top img-clicable" alt="Ramo Kitty" style="height: 240px; object-fit: cover;" onclick="abrirModal('imagen5.jpg', 'Ramo Hello Kitty Pastel')">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-andelisse font-weight-bold">Ramo Hello Kitty Pastel</h5>
+              <p class="card-text small">Ternura pura con peluche y envoltorio en todo rosa pastel.</p>
+              <div class="mt-auto">
+                <span class="badge badge-pill bg-andelisse text-white p-2 mb-2">$25.00</span>
+                <button class="btn btn-andelisse btn-sm btn-block" onclick="agregarAlCarrito('Ramo Hello Kitty Pastel', 25.00)">🛒 Agregar al Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card card-ramo text-center h-100 shadow-sm">
+            <img src="imagen14.jpg" class="card-img-top img-clicable" alt="Corazón Memorial" style="height: 240px; object-fit: cover;" onclick="abrirModal('imagen14.jpg', 'Corazón Memorial con Foto')">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-andelisse font-weight-bold">Corazón Memorial con Foto</h5>
+              <p class="card-text small">Arreglo conmemorativo personalizado para recordar a tu mejor amigo por siempre.</p>
+              <div class="mt-auto">
+                <span class="badge badge-pill bg-andelisse text-white p-2 mb-2">$32.00</span>
+                <button class="btn btn-andelisse btn-sm btn-block" onclick="agregarAlCarrito('Corazón Memorial con Foto', 32.00)">🛒 Agregar al Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MODAL VISTA PREVIA IMAGEN -->
+    <div class="modal fade" id="modalImagen" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content bg-white border-0 shadow-lg">
+          <div class="modal-header bg-andelisse text-white">
+            <h5 class="modal-title font-weight-bold" id="modalTitulo">Vista Previa</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center p-4">
+            <img id="imagenModal" src="" class="img-fluid rounded shadow-sm" style="max-height: 75vh; object-fit: contain;" alt="Imagen Ampliada">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CARRITO DE COMPRAS -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-white border-0 shadow-lg">
+          <div class="modal-header bg-andelisse text-white">
+            <h5 class="modal-title font-weight-bold">🛒 Tu Carrito de Compras</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-3">
+            <div id="cartItemsContainer">
+              <p class="text-center text-muted my-3">El carrito está vacío.</p>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center font-weight-bold px-2">
+              <span>Total:</span>
+              <span class="text-andelisse h5 mb-0" id="cartTotalAmount">$0.00</span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Seguir Viendo</button>
+            <button type="button" class="btn btn-success btn-sm font-weight-bold" onclick="enviarPedidoWhatsApp()">📱 Encargar por WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-andelisse text-white text-center py-3 mt-5">
+      <p class="mb-0 small">&copy; 2026 Andelisse - Ramos Eternos Hechos con Amor 💕</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- LÓGICA DEL CARRITO Y MODAL -->
+    <script>
+      let carrito = [];
+
+      function abrirModal(ruta, titulo) {
+        document.getElementById('imagenModal').src = ruta;
+        document.getElementById('modalTitulo').innerText = titulo;
+        $('#modalImagen').modal('show');
+      }
+
+      function agregarAlCarrito(nombre, precio) {
+        let item = carrito.find(i => i.nombre === nombre);
+        if (item) {
+          item.cantidad++;
+        } else {
+          carrito.push({ nombre, precio, cantidad: 1 });
+        }
+        actualizarCarritoUI();
+        alert('🌸 ¡' + nombre + ' agregado al carrito!');
+      }
+
+      function cambiarCantidad(index, delta) {
+        carrito[index].cantidad += delta;
+        if (carrito[index].cantidad <= 0) {
+          carrito.splice(index, 1);
+        }
+        actualizarCarritoUI();
+      }
+
+      function actualizarCarritoUI() {
+        let totalCount = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        let totalPrice = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+        
+        document.getElementById('cartCountNav').innerText = totalCount;
+        document.getElementById('cartTotalAmount').innerText = '$' + totalPrice.toFixed(2);
+
+        let container = document.getElementById('cartItemsContainer');
+        if (carrito.length === 0) {
+          container.innerHTML = '<p class="text-center text-muted my-3">El carrito está vacío.</p>';
+          return;
+        }
+
+        let html = '<ul class="list-group list-group-flush">';
+        carrito.forEach((item, index) => {
+          html += `
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <div>
+                <strong>${item.nombre}</strong><br>
+                <small class="text-muted">$${item.precio.toFixed(2)} c/u</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-outline-secondary py-0 px-2 mr-2" onclick="cambiarCantidad(${index}, -1)">-</button>
+                <span>${item.cantidad}</span>
+                <button class="btn btn-sm btn-outline-secondary py-0 px-2 ml-2" onclick="cambiarCantidad(${index}, 1)">+</button>
+              </div>
+            </li>
+          `;
+        });
+        html += '</ul>';
+        container.innerHTML = html;
+      }
+
+      function abrirCarrito() {
+        actualizarCarritoUI();
+        $('#modalCarrito').modal('show');
+      }
+
+      function enviarPedidoWhatsApp() {
+        if (carrito.length === 0) {
+          alert('Tu carrito está vacío.');
+          return;
+        }
+        let texto = '¡Hola Andelisse! Quisiera realizar el siguiente pedido:%0A';
+        let total = 0;
+        carrito.forEach(item => {
+          let sub = item.precio * item.cantidad;
+          total += sub;
+          texto += `- ${item.cantidad}x ${item.nombre} ($${sub.toFixed(2)})%0A`;
+        });
+        texto += `%0ATotal estimado: $${total.toFixed(2)}`;
+        window.open('https://wa.me/?text=' + texto, '_blank');
+      }
+    </script>
+  </body>
+</html>
